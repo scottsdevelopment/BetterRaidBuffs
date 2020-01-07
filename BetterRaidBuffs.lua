@@ -151,6 +151,7 @@ function CreateRankText(frame, rank)
     end
     if (rank ~= nil) then
         frame.rank:SetText(rank);
+        frame.rank:Show();
     else
         frame.rank:SetText("");
         frame.rank:Hide();
