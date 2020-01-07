@@ -95,7 +95,6 @@ function SetBuffFramePosition(frame)
                 row = math.floor( i / frame.maxBuffs ) 
                 pos = i % frame.maxBuffs
                 y = row*frame.maxBuffs - (frame.maxBuffs - pos)
-                print(y)
             else
                 y = i - 1
             end
