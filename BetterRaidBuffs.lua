@@ -112,10 +112,7 @@ function ExCompactUnitFrame_UtilSetBuff(buffFrame, unit, index, filter)
     buffFrame.icon:SetTexture(icon);
     local rank = GetSpellRankById(spellId)
     
-    if ( rank ~= nil ) then
-        CreateRankText(buffFrame, rank)    
-    end
-    
+    CreateRankText(buffFrame, rank)
     
     if ( count > 1 ) then
         local countText = count;
@@ -153,7 +150,13 @@ function CreateRankText(frame, rank)
         frame.rank:SetTextColor(1,1,1,.75)
         frame.rank:SetPoint("CENTER",0,0)
     end
-    frame.rank:SetText(rank)
+    if (rank ~= nil) then
+        frame.rank:SetText(rank);
+    else
+        frame.rank:SetText("");
+        frame.rank:Hide();
+    end
+
 end
 
 hooksecurefunc("CompactUnitFrame_UpdateBuffs", ExCompactUnitFrame_UpdateBuffs);
