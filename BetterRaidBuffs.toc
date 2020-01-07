@@ -1,0 +1,8 @@
+## Interface: 11303
+## Title: BetterRaidBuffs
+## Notes: Show spell rank, stacking buffs, and party members of the same class auras on your compact raid frames.
+## Version: v0.1
+## Author: Xodious-Whitemane
+## DefaultState: Enabled
+
+BetterRaidBuffs.lua
