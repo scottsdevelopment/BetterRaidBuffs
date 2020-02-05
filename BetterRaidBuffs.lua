@@ -18,7 +18,7 @@ function ExCompactUnitFrame_UpdateBuffs(frame)
                     SetBuffFramePosition(frame)
                 end
                 
-                ExCompactUnitFrame_UtilSetBuff(buffFrame, frame.displayedUnit, index, filter);
+                CompactUnitFrame_UtilSetBuff(buffFrame, frame.displayedUnit, index, filter);
                 frameNum = frameNum + 1;
             end
         else
@@ -144,7 +144,7 @@ end
 
 function CreateRankText(frame, rank)
     if frame.rank == nil then
-        frame.rank = frame:CreateFontString("rank","OVERLAY") 
+        frame.rank = frame:CreateFontString(frame:GetName().."Rank","OVERLAY") 
         frame.rank:SetFontObject(Number12Font_o1)
         frame.rank:SetTextColor(1,1,1,.75)
         frame.rank:SetPoint("CENTER",0,0)
@@ -160,3 +160,4 @@ function CreateRankText(frame, rank)
 end
 
 hooksecurefunc("CompactUnitFrame_UpdateBuffs", ExCompactUnitFrame_UpdateBuffs);
+hooksecurefunc("CompactUnitFrame_UtilSetBuff", ExCompactUnitFrame_UtilSetBuff);
